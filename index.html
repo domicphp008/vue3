@@ -12,7 +12,9 @@
 
         <p>{{ name }} {{ lastName }}</p>
             
-        <img v-bind:src="product.image" v-bind:alt="product.title" style="max-width: 80px;">
+        <img v-bind:src="product.image" v-bind:alt="product.title" style="max-width: 100px;">
+
+        <img :src="product2.image" :alt="product2.title" style="max-width: 145px;">
     </div>
     
     <script src="https://unpkg.com/vue@next"></script>
