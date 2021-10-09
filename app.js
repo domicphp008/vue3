@@ -2,12 +2,12 @@ const app = {
     data (){
         return {
             name: 'Domicio',
-            lastName: 'José - Curso de Vue - 3 - Entendendo Sobre Bidding no Vue3',
+            lastName: 'José - Curso de Vue - 3 - Redenrização condicional  no Vue3',
             product: {
                 title: 'Filme 01',
                 description: 'Filme muito legal',
                 image: './assets/images/filme01.jpg',
-                stars: 2,
+                stars: 3,
             },
             product2: {
                 title: 'Filme 02',

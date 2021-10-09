@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Vue 3</title>
+    <title>Curso de Vue - 3</title>
 </head>
 <body>
     <div id="app">
@@ -13,10 +13,10 @@
         <p>{{ name }} {{ lastName }}</p>
             
         <img v-bind:src="product.image" v-bind:alt="product.title" style="max-width: 100px;">
-        <strong v-show="product.stars > 0">{{product.stars}}</strong>
+        <strong v-if="product.stars > 0">{{product.stars}}</strong>
 
         <img :src="product2.image" :alt="product2.title" style="max-width: 100px;">
-        <strong v-if="product2.stars > 0">{{product2.stars}}</strong>
+        <strong v-show="product2.stars > 0">{{product2.stars}}</strong>
 
     </div>
     
