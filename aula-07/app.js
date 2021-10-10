@@ -1,6 +1,7 @@
 const app = {
     data (){
         return {
+            title: 'Curos de Vue 3',
             name: 'Domicio José',
             lastName: 'José - Curso de Vue - 3 ',
             products: [
@@ -19,7 +20,22 @@ const app = {
             ],
             cart: [],     
         }
-    }
+    },
+    methods: {
+        addCart (product) {
+            this.cart.push(product)
+        },
+
+        inCart (product) {
+            return this.cart.indexOf(product) != -1
+        },
+
+
+        removeCart (product) {
+            this.cart = this.cart.filter((prod, index) => product != prod)  
+           
+        }    
+    },
 }
 
 Vue.createApp(app ).mount('#app')
