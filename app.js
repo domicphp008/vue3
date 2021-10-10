@@ -2,7 +2,7 @@ const app = {
     data (){
         return {
             name: 'Domicio José',
-            lastName: 'José - Curso de Vue - 3 - Redenrização condicional  no Vue3',
+            lastName: 'José - Curso de Vue - 3 ',
             products: [
                 {
                     title: 'Filme 01',
