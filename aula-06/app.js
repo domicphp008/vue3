@@ -1,6 +1,7 @@
 const app = {
     data (){
         return {
+            title: 'Curos de Vue 3',
             name: 'Domicio José',
             lastName: 'José - Curso de Vue - 3 ',
             products: [
@@ -16,9 +17,15 @@ const app = {
                     image: './assets/images/filme02.jpg',
                     stars: 0
                 }
-            ]     
+            ],
+            cart: [],     
         }
-    }
+    },
+    methods: {
+        addCart (product) {
+            this.cart.push(product)
+        }
+    },
 }
 
 Vue.createApp(app ).mount('#app')
