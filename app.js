@@ -7,13 +7,13 @@ const app = {
                 title: 'Filme 01',
                 description: 'Filme muito legal',
                 image: './assets/images/filme01.jpg',
-                stars: 3,
+                stars: 0,
             },
             product2: {
                 title: 'Filme 02',
                 description: 'Filme muito legal',
                 image: './assets/images/filme02.jpg',
-                stars: 0
+                stars: 3
             }
 
                 
