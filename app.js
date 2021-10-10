@@ -1,7 +1,7 @@
 const app = {
     data (){
         return {
-            name: 'Domicio José',
+            name: 'Domicio',
             lastName: 'José - Curso de Vue - 3 ',
             products: [
                 {
