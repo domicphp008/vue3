@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Vue - 3</title>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+
+        <p>{{ fullName }}</p>
+        <hr>
+        <h3>Carrinho ({{ cart.length }})</h3>
+    
+        <ul>
+            <li v-for="(product, index) in products" :key="index">
+                <p>{{ product.title }}</p>
+                <img :src="product.image" :alt="product.title" style="max-width: 100px;">
+                <strong v-if="product.stars > 0">{{product.stars}}</strong>
+            <a 
+                href="#" 
+                @click.prevent="removeCart(product)"
+                v-if="inCart(product)">
+                REMOVE CART
+            </a>
+            <a 
+                href="#" 
+                v-on:click.prevent="addCart(product)"
+                v-else>
+                ADD CART
+            </a>
+
+            </li>
+        </ul>
+    </div>
+    
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
