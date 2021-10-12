@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Vue - 3</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
     <div id="app">
@@ -23,18 +24,12 @@
                 <p>{{ product.title }}</p>
                 <img :src="product.image" :alt="product.title" style="max-width: 100px;">
                 <strong v-if="product.stars > 0">{{product.stars}}</strong>
-            <a 
-                href="#" 
-                @click.prevent="removeCart(product)"
-                v-if="inCart(product)">
-                REMOVE CART
-            </a>
-            <a 
-                href="#" 
-                v-on:click.prevent="addCart(product)"
-                v-else>
+            <button 
+               @click.prevent="addCart(product)"
+                :disabled="inCart(product)"
+                :class="['color', {'button-disabled' : inCart(product)}]">
                 ADD CART
-            </a>
+            </button>
 
             </li>
         </ul>
